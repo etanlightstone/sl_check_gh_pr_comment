@@ -1,0 +1,5 @@
+{
+"ghtoken": "... your github access token or password goes here ...",
+"repo_url": "https://api.github.com/repos/<user>/<repo name>",
+"sl_access_token": ".. your ShiftLeft API access token goes here .. "
+}
