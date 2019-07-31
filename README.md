@@ -1,4 +1,6 @@
-This checks for build failure based on ShiftLeft's vulnerabilitiy analysis, and should be used as a build step after you run sl analyze as follows in jenkins:
+This checks for build failure based on ShiftLeft's vulnerabilitiy analysis, as well as injects a comment with results as a Pull Request Comment. 
+
+This should be used as a build step after you run sl analyze as follows in jenkins:
 
 /usr/bin/sl_check_results.rb $GIT_COMMIT $GIT_BRANCH  <app_name>
 
