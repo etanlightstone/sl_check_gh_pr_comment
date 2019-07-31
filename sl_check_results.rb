@@ -36,7 +36,7 @@ vbody = {
 vurl = "https://www.shiftleft.io/api/v3/public/org/"+sl_config["orgId"]+"/app/"+app_id+"/tag/branch/"+branch_name+"/build"
 
 puts vurl
- 
+
 vresponse = HTTParty.get(vurl,
                         :headers => vheaders)
                   #      :body => vbody.to_json)
@@ -44,11 +44,11 @@ vresponse = HTTParty.get(vurl,
 #puts headers
 # {"success":true} or {"error":true," ..
 build_status = JSON.parse(vresponse.body)
-if build_status["success"] && build_status["success"] == "true"
+if build_status["success"] && build_status["success"] == true
   puts "SUCCESS: No build failing vulnerabilies found"
   exit(0);
 else
-  puts "FAILURE: ShiftLeft Found "+ build_status["highImpactResults"]+ " Build failing vulnerabilities"
+  puts "FAILURE: ShiftLeft Found "+ build_status["highImpactResults"] + " Build failing vulnerabilities"
 
   vuln_url = "https://www.shiftleft.io/api/v3/public/org/"+sl_config["orgId"]+"/app/"+app_id+"/version/"+ commit_hash +"/vulnerabilities"
   vuln_response = HTTParty.post(vuln_url,
@@ -81,4 +81,3 @@ else
   puts ghresponse.message
   exit(1);
 end
-
