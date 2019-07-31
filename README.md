@@ -1,6 +1,10 @@
 NOTE THIS SCRIPT's REQUIREMENTS: 
+
 Ruby 2.3
+
 sudo gem install httparty
+
+
 
 This checks for build failure based on ShiftLeft's vulnerabilitiy analysis, as well as injects a comment with results as a Pull Request Comment. 
 
