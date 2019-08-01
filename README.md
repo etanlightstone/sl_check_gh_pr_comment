@@ -1,4 +1,4 @@
-NOTE THIS SCRIPT's REQUIREMENTS: 
+NOTE THIS SCRIPT's REQUIREMENTS:
 
 Ruby 2.3
 
@@ -6,7 +6,7 @@ sudo gem install httparty
 
 
 
-This checks for build failure based on ShiftLeft's vulnerabilitiy analysis, as well as injects a comment with results as a Pull Request Comment. 
+This checks for build failure based on ShiftLeft's vulnerabilitiy analysis, as well as injects a comment with results as a Pull Request Comment.
 
 This should be used as a build step after you run sl analyze as follows in jenkins:
 
@@ -14,4 +14,4 @@ This should be used as a build step after you run sl analyze as follows in jenki
 
 make sure you move ghconfig.json  into your jenkins home/.shiftleft/  config directory, and modify the ghconfig.json to match your own GH repo and access token
 
- 
+note: you will need to access your SL public API token using the following flag on the ui on your profile page: ?publicApiToken=enable
